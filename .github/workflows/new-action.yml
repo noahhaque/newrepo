@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: new workflow for action 
 
 # Controls when the action will run. 
 on:
@@ -31,5 +31,6 @@ jobs:
 
       # Runs the script 
       - name: Runs the script
-        run: thisisascript.sh
+        run: ./thisisascript.sh
           
+# How do I assign variables in this workflow to be used in the script?
