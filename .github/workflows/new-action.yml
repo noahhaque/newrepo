@@ -22,9 +22,16 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      # Defining a variable 
+      - name: Defining a variable 
+        run: export greeting="welcome back"
+             export user=$(whoami) 
+             export day=$(date +%A) 
+             
       # Runs a command to give permissions to execute bash script
       - name: Give executable option to script
         run: chmod +x thisisascript.sh
@@ -33,4 +40,5 @@ jobs:
       - name: Runs the script
         run: ./thisisascript.sh
           
-# How do I assign variables in this workflow to be used in the script?
+
+
