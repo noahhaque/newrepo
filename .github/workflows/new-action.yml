@@ -33,19 +33,14 @@ jobs:
           echo "user=$(whoami)" >> $GITHUB_ENV 
           echo "day=$(date +%A)" >> $GITHUB_ENV 
 
-      - name: Defining a variable 
-        run: |
-          echo $greeting
-          echo $user
-          echo $day
-             
-      # # Runs a command to give permissions to execute bash script
-      # - name: Give executable option to script
-      #   run: chmod +x thisisascript.sh
 
-      # # Runs the script 
-      # - name: Runs the script
-      #   run: ./thisisascript.sh
+      # Runs a command to give permissions to execute bash script
+      - name: Give executable option to script
+        run: chmod +x thisisascript.sh
+
+      # Runs the script 
+      - name: Runs the script
+        run: ./thisisascript.sh
           
 
 
