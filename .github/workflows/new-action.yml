@@ -32,7 +32,7 @@ jobs:
           echo "greeting=welcome back" >> $GITHUB_ENV 
           echo "user=$(whoami)" >> $GITHUB_ENV 
           echo "day=$(date +%A)" >> $GITHUB_ENV 
-
+          echo $GITHUB_ENV 
 
       # Runs a command to give permissions to execute bash script
       - name: Give executable option to script
