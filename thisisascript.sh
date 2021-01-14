@@ -1,4 +1,5 @@
 #!/bin/bash
 
-echo "Typing out the echo again"
+echo "$greeting $user! Today is $day, which is the best day of the week!"
+echo "Your Bash shell version is: $BASH_VERSION. Enjoy!"
 
