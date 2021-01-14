@@ -29,9 +29,9 @@ jobs:
       # Defining a variable 
       - name: Defining a variable 
         run: |
-          export greeting="welcome back"
-          export user=$(whoami) 
-          export day=$(date +%A) 
+          echo "greeting=welcome back" >> $GITHUB_ENV 
+          echo "user=$(whoami)" >> $GITHUB_ENV 
+          echo "day=$(date +%A)" >> $GITHUB_ENV 
 
       - name: Defining a variable 
         run: |
