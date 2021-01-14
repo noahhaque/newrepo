@@ -26,18 +26,26 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-             
-      # Runs a command to give permissions to execute bash script
-      - name: Give executable option to script
-        run: chmod +x thisisascript.sh
+      # Defining a variable 
+      - name: Defining a variable 
+        run: |
+          export greeting="welcome back"
+          export user=$(whoami) 
+          export day=$(date +%A) 
 
-      # Runs the script 
-      - name: Runs the script
-        run: ./thisisascript.sh
-        env:
-          greeting: "welcome back"
-          user: $(whoami)
-          day: $(date +%A)
+      - name: Defining a variable 
+        run: |
+          echo $greeting
+          echo $user
+          echo $day
+             
+      # # Runs a command to give permissions to execute bash script
+      # - name: Give executable option to script
+      #   run: chmod +x thisisascript.sh
+
+      # # Runs the script 
+      # - name: Runs the script
+      #   run: ./thisisascript.sh
           
 
 
